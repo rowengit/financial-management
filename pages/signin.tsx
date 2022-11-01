@@ -4,6 +4,7 @@ import { CheckBox } from "@components/common/checkbox";
 import Google from "@img/icon/google.png";
 import styled from "styled-components";
 import saving from "@img/saving.png";
+import { Button } from "@components/common/button";
 
 const Main = styled.main`
 	display: flex;
@@ -24,21 +25,6 @@ const Main = styled.main`
 				margin-bottom: 8px;
 			}
 
-			> span {
-				font-weight: 400;
-				font-size: 14px;
-				line-height: 17px;
-				color: #929eae;
-
-				a {
-					color: #1b212d;
-				}
-			}
-
-			.input-group {
-				margin-top: 25px;
-			}
-
 			.input-group + div {
 				display: flex;
 				justify-content: space-between;
@@ -49,32 +35,18 @@ const Main = styled.main`
 					font-size: 14px;
 					line-height: 17px;
 					text-align: right;
-
-					color: #1b212d;
 				}
 			}
 
-			.btn-group {
-				margin: 25px 0;
+			> div:last-child {
+				text-align: center;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 17px;
+				color: ${props => props.theme.colors.text_third};
 
-				button {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					gap: 9px;
-
-					font-weight: 600;
-					font-size: 16px;
-					line-height: 20px;
-					text-align: center;
-					color: #1b212d;
-
-					line-height: 48px;
-					width: 100%;
-				}
-
-				.submit {
-					background: #c8ee44;
+				a {
+					margin-left: 5px;
 				}
 			}
 		}
@@ -110,15 +82,16 @@ export default function SignIn() {
 						<a>Forgot Password</a>
 					</div>
 					<div className="btn-group">
-						<button className="submit">Sign in</button>
-						<button>
+						<Button className="btn-submit">Sign in</Button>
+						<Button className="btn-secondary">
 							<img src={Google.src} />
 							Sign in with google
-						</button>
+						</Button>
 					</div>
-					<span>
-						Don't have an account? <a>Sign up for free</a>
-					</span>
+					<div>
+						<span>Don't have an account?</span>
+						<a>Sign up for free</a>
+					</div>
 				</form>
 			</section>
 			<div className="saving" />

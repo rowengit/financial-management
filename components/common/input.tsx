@@ -12,13 +12,17 @@ const Wrapper = styled.div`
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 17px;
-		color: #78778b;
+		color: ${p => p.theme.colors.text_secondary};
 
 		width: calc(100% - 30px);
 
-		border: 1px #f2f2f2 solid;
+		border: 1px ${p => p.theme.colors.border_secondary} solid;
 		border-radius: 10px;
 		padding: 10px 15px;
+
+		&:focus {
+			outline: 2px solid ${p => p.theme.colors.button_bg_secondary};
+		}
 	}
 `;
 

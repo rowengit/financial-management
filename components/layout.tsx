@@ -1,10 +1,30 @@
 import Head from "next/head";
 import React from "react";
 import { GlobalStyle } from "./globalStyle";
+import { ThemeProvider, DefaultTheme } from "styled-components";
+
+const defColors: DefaultTheme["colors"] = {
+	text_secondary: "#78778B",
+	text_primary: " #1B212D",
+	text_third: "#929eae",
+
+	border_primary: "#929eae",
+	border_secondary: "#f2f2f2",
+	border_third: "#f5f5f5",
+
+	button_bg_primary: "#c8ee44",
+	button_bg_secondary: "#29a073",
+
+	bg_primary: "#fff"
+};
+
+const theme: DefaultTheme = {
+	colors: defColors
+};
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<>
+		<ThemeProvider theme={theme}>
 			<Head>
 				<title>Financial Management</title>
 				<meta
@@ -25,6 +45,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 			</Head>
 			<GlobalStyle />
 			{children}
-		</>
+		</ThemeProvider>
 	);
 };

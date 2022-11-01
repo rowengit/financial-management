@@ -7,15 +7,15 @@ const Wrapper = styled.div`
 		width: 16px;
 		height: 16px;
 		border-radius: 4px;
-		border: 1px solid #929eae;
+		border: 1px solid ${p => p.theme.colors.border_primary};
 		text-align: center;
 		line-height: 16px;
 
 		&:checked {
-			background-color: #29a073;
-			border: 1px solid #29a073;
+			background-color: ${p => p.theme.colors.button_bg_secondary};
+			border: 1px solid ${p => p.theme.colors.button_bg_secondary};
 
-			accent-color: #29a073;
+			accent-color: ${p => p.theme.colors.button_bg_secondary};
 
 			&:after {
 				content: "✓";

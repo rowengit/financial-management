@@ -81,32 +81,46 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
-    span, p, h1 {
+    span, p, h1, a {
         user-select:none;
+    }
+
+    h1, a, label {
+        color: ${props => props.theme.colors.text_primary};
     }
 
     h1{
         font-weight: 600;
         font-size: 30px;
         line-height: 37px;
-        color: #1B212D;
     }
 
     p{
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        color: #78778B;
+        color: ${props => props.theme.colors.text_secondary};
     }
 
     label {
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
-        color: #1B212D;
     }
+
 
     a:hover, button:hover {
         opacity:.8;
+    }
+
+    .btn-group {
+        margin: 25px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group {
+        margin-top: 25px;
     }
 `;
