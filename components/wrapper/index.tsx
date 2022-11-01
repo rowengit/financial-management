@@ -15,14 +15,15 @@ const defColors: DefaultTheme["colors"] = {
 	button_bg_primary: "#c8ee44",
 	button_bg_secondary: "#29a073",
 
-	bg_primary: "#fff"
+	bg_primary: "#fff",
+	bg_secondary: "#FAFAFA"
 };
 
 const theme: DefaultTheme = {
 	colors: defColors
 };
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+export const Wrapper = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Head>

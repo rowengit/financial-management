@@ -78,8 +78,8 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Kumbh Sans', sans-serif;
 	}
 
-    a, button {
-        cursor: pointer;
+    a, a:hover {
+        text-decoration: none;
     }
 
     span, p, h1, a {
@@ -103,14 +103,17 @@ export const GlobalStyle = createGlobalStyle`
         color: ${props => props.theme.colors.text_secondary};
     }
 
-    div, a, input, label {
+    div, input, label {
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
     }
 
+    a, button, li {
+        cursor: pointer;
+    }
 
-    a:hover, button:hover {
+    a:hover, button:hover, li:not([class^="active"]):hover {
         opacity:.8;
     }
 

@@ -4,7 +4,7 @@ import { CheckBox } from "@components/common/checkbox";
 import Google from "@img/icon/google.png";
 import styled from "styled-components";
 import { Button } from "@components/common/button";
-import { BeforeLoginWrapper } from "@components/beforeLogin";
+import { BeforeLoginWrapper } from "@wrapper/beforeLogin";
 
 const Form = styled.form`
 	min-width: 404px;
@@ -52,14 +52,16 @@ export default function SignIn() {
 					<a>Forgot Password</a>
 				</div>
 				<div className="btn-group">
-					<Button className="btn-submit">Sign in</Button>
+					<Button className="btn-submit">
+						<Link href="/">Sign in</Link>
+					</Button>
 					<Button className="btn-secondary">
-						<img src={Google.src} />
+						<img src={Google.src} alt="Google" />
 						Sign in with google
 					</Button>
 				</div>
 				<div>
-					<span>Don't have an account?</span>
+					<span>{`Don't have an account?`}</span>
 					<Link href={"/signup"}>Sign up for free</Link>
 				</div>
 			</Form>

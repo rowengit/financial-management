@@ -1,4 +1,4 @@
-import logo from "@img/logo.png";
+import { Logo } from "@components/common/logo";
 import styled from "styled-components";
 import saving from "@img/saving.png";
 
@@ -33,7 +33,7 @@ export function BeforeLoginWrapper({
 	return (
 		<Styled>
 			<section>
-				<img src={logo.src} alt="Maglo. Logo" />
+				<Logo />
 				{children}
 			</section>
 			<div className="saving" />

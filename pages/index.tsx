@@ -1,3 +1,4 @@
+import { AfterLogin } from "@wrapper/afterLogin";
 export default function Home() {
-	return <p>Dashboard</p>;
+	return <AfterLogin>{/* <p>Dashboard</p> */}</AfterLogin>;
 }

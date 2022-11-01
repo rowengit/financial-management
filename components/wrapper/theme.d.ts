@@ -15,6 +15,7 @@ declare module "styled-components" {
 			button_bg_secondary: string;
 
 			bg_primary: string;
+			bg_secondary: string;
 		};
 	}
 }

@@ -2,7 +2,7 @@ import { Input } from "@components/common/input";
 import Google from "@img/icon/google.png";
 import styled from "styled-components";
 import { Button } from "@components/common/button";
-import { BeforeLoginWrapper } from "@components/beforeLogin";
+import { BeforeLoginWrapper } from "@wrapper/beforeLogin";
 import Link from "next/link";
 
 const Form = styled.form`
@@ -45,7 +45,9 @@ export default function SignUp() {
 					<Input title="Password" type="password" />
 				</div>
 				<div className="btn-group">
-					<Button className="btn-submit">Create Account</Button>
+					<Button className="btn-submit">
+						<Link href="/">Create Account</Link>
+					</Button>
 					<Button className="btn-secondary">
 						<img src={Google.src} />
 						Sign up with google
