@@ -31,9 +31,6 @@ const Main = styled.main`
 				align-items: center;
 
 				a {
-					font-weight: 500;
-					font-size: 14px;
-					line-height: 17px;
 					text-align: right;
 				}
 			}
@@ -41,8 +38,6 @@ const Main = styled.main`
 			> div:last-child {
 				text-align: center;
 				font-weight: 400;
-				font-size: 14px;
-				line-height: 17px;
 				color: ${props => props.theme.colors.text_third};
 
 				a {

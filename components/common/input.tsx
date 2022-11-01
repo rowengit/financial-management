@@ -9,11 +9,7 @@ const Wrapper = styled.div`
 	}
 
 	input {
-		font-weight: 500;
-		font-size: 14px;
-		line-height: 17px;
 		color: ${p => p.theme.colors.text_secondary};
-
 		width: calc(100% - 30px);
 
 		border: 1px ${p => p.theme.colors.border_secondary} solid;
