@@ -82,7 +82,7 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
-    span, p, h1, a {
+    span, p, h1, a, li {
         user-select:none;
     }
 
