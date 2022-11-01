@@ -19,6 +19,11 @@ const Wrapper = styled.div`
 		&:focus {
 			outline: 2px solid ${p => p.theme.colors.button_bg_secondary};
 		}
+
+		&[type="password"] {
+			font-family: Verdana;
+			letter-spacing: 0.125em;
+		}
 	}
 `;
 

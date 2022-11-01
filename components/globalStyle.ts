@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-	/* 
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    /* 
         http://meyerweb.com/eric/tools/css/reset/ 
         v2.0 | 20110126
         License: none (public domain)
@@ -73,8 +74,8 @@ export const GlobalStyle = createGlobalStyle`
 
     /* ------------------------------ */
 
-    body {
-        font-family: 'Kumbh Sans';
+    * {
+        font-family: 'Kumbh Sans', sans-serif;
 	}
 
     a, button {
