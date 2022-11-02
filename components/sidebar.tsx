@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Logo } from "./common/logo";
 import * as Icon from "@icons";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Styled = styled.div`
 	width: 250px;
@@ -61,40 +61,41 @@ const Styled = styled.div`
 `;
 
 export const Sidebar = () => {
+	const { asPath, push } = useRouter();
 	return (
 		<Styled>
 			<Logo />
 			<div>
 				<ul>
-					<li className="active">
-						<Link href="/">
-							<Icon.Dashboard />
-							Dashboard
-						</Link>
+					<li
+						className={asPath === "/" ? "active" : ""}
+						onClick={() => push("/")}>
+						<Icon.Dashboard />
+						Dashboard
 					</li>
-					<li>
-						<Link href="/transaction">
-							<Icon.Transactions />
-							Transactions
-						</Link>
+					<li
+						className={asPath === "/transaction" ? "active" : ""}
+						onClick={() => push("/transaction")}>
+						<Icon.Transactions />
+						Transactions
 					</li>
-					<li>
-						<Link href="/invoices">
-							<Icon.Invoices />
-							Invoices
-						</Link>
+					<li
+						className={asPath === "/invoices" ? "active" : ""}
+						onClick={() => push("/invoices")}>
+						<Icon.Invoices />
+						Invoices
 					</li>
-					<li>
-						<Link href="/myWallets">
-							<Icon.Wallet />
-							My Wallets
-						</Link>
+					<li
+						className={asPath === "/myWallets" ? "active" : ""}
+						onClick={() => push("/myWallets")}>
+						<Icon.Wallet />
+						My Wallets
 					</li>
-					<li>
-						<Link href="/settings">
-							<Icon.Settings />
-							Settings
-						</Link>
+					<li
+						className={asPath === "/settings" ? "active" : ""}
+						onClick={() => push("/settings")}>
+						<Icon.Settings />
+						Settings
 					</li>
 				</ul>
 				<ul>
@@ -102,11 +103,9 @@ export const Sidebar = () => {
 						<Icon.Help />
 						Help
 					</li>
-					<li>
-						<Link href={"/signin"}>
-							<Icon.Logout />
-							Logout
-						</Link>
+					<li onClick={() => push("/signin")}>
+						<Icon.Logout />
+						Logout
 					</li>
 				</ul>
 			</div>
