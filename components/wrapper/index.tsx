@@ -16,7 +16,13 @@ const defColors: DefaultTheme["colors"] = {
 	button_bg_secondary: "#29a073",
 
 	bg_primary: "#fff",
-	bg_secondary: "#FAFAFA"
+	bg_secondary: "#FAFAFA",
+	bg_third: "#363A3F",
+	bg_fourth: "#4E5257",
+
+	gray_1: "#F8F8F8",
+	gray_2: "#EBE8E8",
+	gray_3: "#FAFAFA"
 };
 
 const theme: DefaultTheme = {

@@ -16,6 +16,12 @@ declare module "styled-components" {
 
 			bg_primary: string;
 			bg_secondary: string;
+			bg_third: string;
+			bg_fourth: string;
+
+			gray_1: string;
+			gray_2: string;
+			gray_3: string;
 		};
 	}
 }

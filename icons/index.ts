@@ -7,3 +7,6 @@ export * from "./help";
 export * from "./logout";
 export * from "./search";
 export * from "./notification";
+export * from "./balance";
+export * from "./walletAdd";
+export * from "./down";
