@@ -5,3 +5,5 @@ export * from "./wallet";
 export * from "./settings";
 export * from "./help";
 export * from "./logout";
+export * from "./search";
+export * from "./notification";

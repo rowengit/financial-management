@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
 
     /* ------------------------------ */
 
-    * {
+    body, h1, h2, h3, p, button, a, p, span, div {
         font-family: 'Kumbh Sans', sans-serif;
 	}
 
@@ -102,6 +102,7 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 20px;
         color: ${props => props.theme.colors.text_secondary};
     }
+
 
     div, input, label {
         font-weight: 500;
