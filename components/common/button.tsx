@@ -33,6 +33,12 @@ const Styled = styled.button`
 	&.btn-secondary {
 		border: 1px solid ${props => props.theme.colors.border_third};
 	}
+
+	&.add {
+		color: ${p => p.theme.colors.button_bg_secondary};
+		background: ${p => p.theme.colors.gray_1};
+		border: 1px solid ${p => p.theme.colors.border_third};
+	}
 `;
 
 export const Button = ({

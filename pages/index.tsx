@@ -91,21 +91,6 @@ const Styled = styled.main`
 			}
 		}
 	}
-
-	.title {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 20px;
-
-		h2 {
-			font-weight: 600;
-			font-size: 18px;
-		}
-
-		a {
-			color: ${p => p.theme.colors.button_bg_secondary};
-		}
-	}
 `;
 
 const Recent = styled.div`

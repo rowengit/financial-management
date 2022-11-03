@@ -31,7 +31,7 @@ export default function Invoices() {
 		<AfterLogin title="Invoices">
 			<Styled>
 				<div>
-					<InputIcon>
+					<InputIcon bg={true} border={true} width="360px">
 						<Search />
 						<input placeholder="Search anything on Invoices" />
 					</InputIcon>

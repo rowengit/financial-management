@@ -19,3 +19,4 @@ export * from "./chip";
 export * from "./wifi";
 export * from "./visa";
 export * from "./masterCard";
+export * from "./plus";

@@ -21,7 +21,7 @@ export default function Transaction() {
 		<AfterLogin title="Transaction">
 			<Styled>
 				<div>
-					<InputIcon>
+					<InputIcon bg={true} border={true} width="360px">
 						<Search />
 						<input placeholder="Search anything on Transactions" />
 					</InputIcon>
