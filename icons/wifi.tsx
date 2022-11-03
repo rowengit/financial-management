@@ -8,9 +8,9 @@ export const Wifi = () => (
 		<path
 			d="M17.2264 6.75129C21.9297 12.6638 21.9297 20.35 17.2264 26.2625M22.1564 2.75C28.7864 11.0825 28.7864 21.9175 22.1564 30.25M12.0555 9.3363C15.5122 13.6676 15.5122 19.3188 12.0555 23.65M6.87054 12.925C8.59888 15.0975 8.59888 17.9162 6.87054 20.0887"
 			stroke="#363B41"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
 		/>
 	</svg>
 );
