@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Balance, WalletAdd } from "@icons";
 import { Char } from "@components/char";
 import { AfterLogin } from "@wrapper/afterLogin";
+import { Table } from "@styles/table.styled";
 
 const Styled = styled.main`
 	width: calc(100% - 250px - 80px);
@@ -102,35 +103,6 @@ const Recent = styled.div`
 	border: 1px ${p => p.theme.colors.border_third} solid;
 	border-radius: 10px;
 	padding: 20px 25px;
-
-	.table {
-		width: 100%;
-		display: table;
-		border-collapse: collapse;
-
-		> div {
-			display: table-row;
-			&:not(:first-child) {
-				border-bottom: 1px ${p => p.theme.colors.border_third} solid;
-			}
-
-			> div {
-				display: table-cell;
-				line-height: 53px;
-
-				&:nth-child(even) {
-					color: ${p => p.theme.colors.text_third};
-				}
-			}
-
-			&:first-child {
-				> div {
-					line-height: 20px;
-					color: ${p => p.theme.colors.text_third};
-				}
-			}
-		}
-	}
 `;
 
 const WalletRecent = styled.div`
@@ -207,7 +179,7 @@ export default function Dashboard() {
 							<h2>Recent Transaction</h2>
 							<a>View All</a>
 						</div>
-						<div className="table">
+						<Table LineHeight="53px">
 							<div className="header">
 								<div>NAME/BUSINESS</div>
 								<div>TYPE</div>
@@ -232,7 +204,7 @@ export default function Dashboard() {
 								<div>$244.20</div>
 								<div>02 Apr 2022</div>
 							</div>
-						</div>
+						</Table>
 					</Recent>
 				</section>
 				<section>

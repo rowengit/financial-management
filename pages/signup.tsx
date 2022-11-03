@@ -48,11 +48,11 @@ export default function SignUp() {
 				</div>
 				<div className="btn-group">
 					<Button
-						className="btn-submit"
+						className="btn-submit full"
 						onClick={() => router.push("/")}>
 						Create Account
 					</Button>
-					<Button className="btn-secondary">
+					<Button className="btn-secondary full">
 						<img src={Google.src} />
 						Sign up with google
 					</Button>

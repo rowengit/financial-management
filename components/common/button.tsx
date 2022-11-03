@@ -8,15 +8,16 @@ const Styled = styled.button`
 	gap: 10px;
 
 	font-weight: 600;
+	white-space: nowrap;
 
 	&.action {
-		border-radius: 4px;
+		border-radius: 10px;
 		font-size: 14px;
 		line-height: 40px;
 		padding: 0 20px;
 	}
 
-	&:not(.action) {
+	&.full {
 		font-size: 16px;
 		text-align: center;
 		color: ${p => p.theme.colors.text_primary};
@@ -40,7 +41,7 @@ export const Button = ({
 	onClick,
 	type = "button"
 }: {
-	className: string;
+	className?: string;
 	children?: React.ReactNode;
 	onClick?: () => void;
 	type?: "button";

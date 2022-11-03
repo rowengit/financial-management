@@ -55,11 +55,11 @@ export default function SignIn() {
 				</div>
 				<div className="btn-group">
 					<Button
-						className="btn-submit"
+						className="btn-submit full"
 						onClick={() => router.push("/")}>
 						Sign in
 					</Button>
-					<Button className="btn-secondary">
+					<Button className="btn-secondary full">
 						<img src={Google.src} alt="Google" />
 						Sign in with google
 					</Button>

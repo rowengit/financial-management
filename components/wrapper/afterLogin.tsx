@@ -10,6 +10,7 @@ const Styled = styled.div`
 		width: calc(100% - 330px);
 		margin-top: 108px;
 		margin-left: 40px;
+		padding-bottom: 30px;
 	}
 `;
 

@@ -22,7 +22,14 @@ const defColors: DefaultTheme["colors"] = {
 
 	gray_1: "#F8F8F8",
 	gray_2: "#EBE8E8",
-	gray_3: "#FAFAFA"
+	gray_3: "#FAFAFA",
+
+	status_pending_bg: "#FFF1E5",
+	status_pending_text: "#F2994A",
+	status_paid_bg: "#D9FFE9",
+	status_paid_text: "#27AE60",
+	status_unpaid_bg: "#FFEFEF",
+	status_unpaid_text: "#EB5757"
 };
 
 const theme: DefaultTheme = {
