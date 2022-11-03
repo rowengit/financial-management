@@ -1,7 +1,9 @@
-import { withAfterLogin } from "@components/hoc/withAfterLogin";
+import { AfterLogin } from "@wrapper/afterLogin";
 
-function Invoices() {
-	return <main>Invoices</main>;
+export default function Invoices() {
+	return (
+		<AfterLogin title="Invoices">
+			<main>Invoices</main>
+		</AfterLogin>
+	);
 }
-
-export default withAfterLogin(Invoices);

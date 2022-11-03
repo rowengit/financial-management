@@ -1,7 +1,9 @@
-import { withAfterLogin } from "@components/hoc/withAfterLogin";
+import { AfterLogin } from "@wrapper/afterLogin";
 
-function MyWallets() {
-	return <main>MyWallets</main>;
+export default function MyWallets() {
+	return (
+		<AfterLogin title="My Wallets">
+			<main>MyWallets</main>
+		</AfterLogin>
+	);
 }
-
-export default withAfterLogin(MyWallets);

@@ -1,11 +1,9 @@
-import { withAfterLogin } from "@components/hoc/withAfterLogin";
 import styled from "styled-components";
 import { Search } from "@icons";
 import { Button } from "@components/common/button";
+import { AfterLogin } from "@wrapper/afterLogin";
 
 const Styled = styled.main`
-	width: 100%;
-
 	> div {
 		border-bottom: 1px ${p => p.theme.colors.border_third} solid;
 		margin-bottom: 25px;
@@ -63,32 +61,34 @@ const Table = styled.div`
 	}
 `;
 
-function Transaction() {
+export default function Transaction() {
 	const arr = new Array(20);
 	arr.fill(0);
 
 	return (
-		<Styled>
-			<div>
-				<div className="ipt-icon">
-					<Search />
-					<input placeholder="Search anything on Transactions" />
-				</div>
-			</div>
-			<Table>
+		<AfterLogin title="Transaction">
+			<Styled>
 				<div>
-					<div>NAME/BUSINESS</div>
-					<div>TYPE</div>
-					<div>AMOUNT</div>
-					<div>DATE</div>
-					<div>INVOICE ID</div>
-					<div>ACTION</div>
+					<div className="ipt-icon">
+						<Search />
+						<input placeholder="Search anything on Transactions" />
+					</div>
 				</div>
-				{arr.map((r, rIdx) => (
-					<TableRow key={rIdx} />
-				))}
-			</Table>
-		</Styled>
+				<Table>
+					<div>
+						<div>NAME/BUSINESS</div>
+						<div>TYPE</div>
+						<div>AMOUNT</div>
+						<div>DATE</div>
+						<div>INVOICE ID</div>
+						<div>ACTION</div>
+					</div>
+					{arr.map((r, rIdx) => (
+						<TableRow key={rIdx} />
+					))}
+				</Table>
+			</Styled>
+		</AfterLogin>
 	);
 }
 
@@ -107,5 +107,3 @@ const TableRow = () => (
 		</div>
 	</div>
 );
-
-export default withAfterLogin(Transaction);

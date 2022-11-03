@@ -7,15 +7,22 @@ const Styled = styled.div`
 	position: relative;
 
 	main {
+		width: calc(100% - 330px);
 		margin-top: 108px;
 		margin-left: 40px;
 	}
 `;
 
-export const AfterLogin = ({ children }: { children: React.ReactNode }) => {
+export const AfterLogin = ({
+	children,
+	title
+}: {
+	children: React.ReactNode;
+	title: string;
+}) => {
 	return (
 		<Styled>
-			<Header title="Dashboard" />
+			<Header title={title} />
 			<Sidebar />
 			{children}
 		</Styled>

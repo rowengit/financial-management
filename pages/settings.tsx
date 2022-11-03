@@ -1,7 +1,9 @@
-import { withAfterLogin } from "@components/hoc/withAfterLogin";
+import { AfterLogin } from "@wrapper/afterLogin";
 
-function Settings() {
-	return <main>Settings</main>;
+export default function Settings() {
+	return (
+		<AfterLogin title="Settings">
+			<main>Settings</main>
+		</AfterLogin>
+	);
 }
-
-export default withAfterLogin(Settings);
