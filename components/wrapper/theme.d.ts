@@ -6,6 +6,8 @@ declare module "styled-components" {
 			text_primary: string;
 			text_secondary: string;
 			text_third: string;
+			text_fourth: string;
+			text_5: string;
 
 			border_primary: string;
 			border_secondary: string;

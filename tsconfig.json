@@ -23,6 +23,7 @@
       "@icons": ["./icons"],
       "@hooks/*": ["./components/hooks/*"],
       "@styles/*": ["./styles/*"],
+      "@common/*": ["components/common/*"],
 		}
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

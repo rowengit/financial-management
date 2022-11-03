@@ -15,3 +15,7 @@ export * from "./filter";
 export * from "./receipt";
 export * from "./arrowDown";
 export * from "./arrowUp";
+export * from "./chip";
+export * from "./wifi";
+export * from "./visa";
+export * from "./masterCard";

@@ -184,7 +184,7 @@ export const Char = () => {
 					<div
 						className={`dropdown${open ? " active" : ""}`}
 						ref={ref}>
-						<div onClick={() => isOpen(true)}>
+						<div onClick={() => isOpen(prev => !prev)}>
 							<span>Last 7 Days</span>
 							<Down />
 						</div>

@@ -3,13 +3,23 @@ import { Balance, WalletAdd } from "@icons";
 import { Char } from "@components/char";
 import { AfterLogin } from "@wrapper/afterLogin";
 import { Table } from "@styles/table.styled";
+import { Card } from "@common/card";
 
 const Styled = styled.main`
 	width: calc(100% - 250px - 80px);
-	display: grid;
-	grid-template-columns: 3fr 1fr;
+	display: flex;
 	gap: 40px;
 	margin-right: 40px;
+
+	section {
+		&:first-child {
+			width: calc(100% - 380px);
+		}
+
+		&:last-child {
+			width: 340px;
+		}
+	}
 
 	.summary {
 		margin-bottom: 30px;
@@ -211,6 +221,7 @@ export default function Dashboard() {
 					<div className="title">
 						<h2>Wallet</h2>
 					</div>
+					<Card />
 					<div className="title">
 						<h2>Recent Transaction</h2>
 						<a>View All</a>

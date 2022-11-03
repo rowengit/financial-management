@@ -7,6 +7,8 @@ const defColors: DefaultTheme["colors"] = {
 	text_secondary: "#78778B",
 	text_primary: " #1B212D",
 	text_third: "#929eae",
+	text_fourth: "#626260",
+	text_5: "#868685",
 
 	border_primary: "#929eae",
 	border_secondary: "#f2f2f2",
