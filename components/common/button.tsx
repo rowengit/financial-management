@@ -28,11 +28,18 @@ const Styled = styled.button`
 
 export const Button = ({
 	className,
-	children
+	children,
+	onClick,
+	type = "button"
 }: {
 	className: string;
-
 	children?: React.ReactNode;
+	onClick?: () => void;
+	type?: "button";
 }) => {
-	return <Styled className={className}>{children}</Styled>;
+	return (
+		<Styled className={className} onClick={onClick} type={type}>
+			{children}
+		</Styled>
+	);
 };

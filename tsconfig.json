@@ -21,6 +21,7 @@
       "@wrapper/*": ["components/wrapper/*"],
 			"@icons/*": ["./icons/*"],
       "@icons": ["./icons"],
+      "@hooks/*": ["./components/hooks/*"],
 		}
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

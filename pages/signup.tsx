@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "@components/common/button";
 import { BeforeLoginWrapper } from "@wrapper/beforeLogin";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Form = styled.form`
 	min-width: 404px;
@@ -34,6 +35,7 @@ const Form = styled.form`
 `;
 
 export default function SignUp() {
+	const router = useRouter();
 	return (
 		<BeforeLoginWrapper>
 			<Form>
@@ -45,8 +47,10 @@ export default function SignUp() {
 					<Input title="Password" type="password" />
 				</div>
 				<div className="btn-group">
-					<Button className="btn-submit">
-						<Link href="/">Create Account</Link>
+					<Button
+						className="btn-submit"
+						onClick={() => router.push("/")}>
+						Create Account
 					</Button>
 					<Button className="btn-secondary">
 						<img src={Google.src} />

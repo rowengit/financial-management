@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -13,6 +13,7 @@ import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 import styled from "styled-components";
 import { Down } from "@icons";
+import { useClickOutside } from "@hooks/useClickOutside";
 
 ChartJS.register(
 	CategoryScale,
@@ -118,6 +119,7 @@ const Styled = styled.div`
 		}
 
 		.dropdown {
+			position: relative;
 			> div {
 				background: ${p => p.theme.colors.gray_1};
 				height: 30px;
@@ -129,33 +131,72 @@ const Styled = styled.div`
 					margin-left: 10px;
 				}
 			}
+
+			ul {
+				display: none;
+				width: calc(100% - 20px);
+			}
+
+			&.active {
+				ul {
+					display: initial;
+					position: absolute;
+					top: 40px;
+					background: #fff;
+					border: 1px ${p => p.theme.colors.border_secondary} solid;
+					padding: 10px;
+					border-radius: 5px;
+
+					li {
+						line-height: 32px;
+
+						&:hover {
+							color: ${p => p.theme.colors.button_bg_secondary};
+							font-weight: 700;
+						}
+					}
+				}
+			}
 		}
 	}
 `;
 
-export const Char = () => (
-	<Styled>
-		<div>
-			<h2>Working Capital</h2>
-			<div className="right">
-				<ul>
-					<li>
-						<span className="income" />
-						Income
-					</li>
-					<li>
-						<span className="expense" />
-						Expense
-					</li>
-				</ul>
-				<div className="dropdown">
-					<div>
-						<span>Last 7 Days</span>
-						<Down />
+export const Char = () => {
+	const [open, isOpen] = useState(false);
+
+	const ref = useRef(null);
+	useClickOutside(ref, () => isOpen(false));
+	return (
+		<Styled>
+			<div>
+				<h2>Working Capital</h2>
+				<div className="right">
+					<ul>
+						<li>
+							<span className="income" />
+							Income
+						</li>
+						<li>
+							<span className="expense" />
+							Expense
+						</li>
+					</ul>
+					<div
+						className={`dropdown${open ? " active" : ""}`}
+						ref={ref}>
+						<div onClick={() => isOpen(true)}>
+							<span>Last 7 Days</span>
+							<Down />
+						</div>
+						<ul onClick={() => isOpen(false)}>
+							<li>Last 7 Days</li>
+							<li>Last 30 Days</li>
+							<li>Last 90 Days</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-		<Line options={options} data={data} />
-	</Styled>
-);
+			<Line options={options} data={data} />
+		</Styled>
+	);
+};

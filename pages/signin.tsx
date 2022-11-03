@@ -5,6 +5,7 @@ import Google from "@img/icon/google.png";
 import styled from "styled-components";
 import { Button } from "@components/common/button";
 import { BeforeLoginWrapper } from "@wrapper/beforeLogin";
+import { useRouter } from "next/router";
 
 const Form = styled.form`
 	min-width: 404px;
@@ -35,6 +36,7 @@ const Form = styled.form`
 `;
 
 export default function SignIn() {
+	const router = useRouter();
 	return (
 		<BeforeLoginWrapper>
 			<Form>
@@ -52,8 +54,10 @@ export default function SignIn() {
 					<a>Forgot Password</a>
 				</div>
 				<div className="btn-group">
-					<Button className="btn-submit">
-						<Link href="/">Sign in</Link>
+					<Button
+						className="btn-submit"
+						onClick={() => router.push("/")}>
+						Sign in
 					</Button>
 					<Button className="btn-secondary">
 						<img src={Google.src} alt="Google" />
