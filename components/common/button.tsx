@@ -8,14 +8,22 @@ const Styled = styled.button`
 	gap: 10px;
 
 	font-weight: 600;
-	font-size: 16px;
-	line-height: 20px;
-	text-align: center;
-	color: ${p => p.theme.colors.text_primary};
 
-	line-height: 48px;
-	width: 100%;
-	border-radius: 10px;
+	&.action {
+		border-radius: 4px;
+		font-size: 14px;
+		line-height: 40px;
+		padding: 0 20px;
+	}
+
+	&:not(.action) {
+		font-size: 16px;
+		text-align: center;
+		color: ${p => p.theme.colors.text_primary};
+		line-height: 48px;
+		width: 100%;
+		border-radius: 10px;
+	}
 
 	&.btn-submit {
 		background: ${p => p.theme.colors.button_bg_primary};
