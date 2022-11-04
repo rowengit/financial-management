@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { AfterLogin } from "@wrapper/afterLogin";
 import { Card } from "@common/card";
@@ -6,6 +7,7 @@ import { ArrowDown } from "@icons/arrowDown";
 import { Button } from "@common/button";
 import { Plus, Search } from "@icons";
 import { InputIcon } from "@styles/inputIcon.styled";
+import { Table } from "@styles/table.styled";
 
 const Styled = styled.main`
 	display: flex;
@@ -66,7 +68,14 @@ const Styled = styled.main`
 	}
 
 	.right {
-		width: 100%;
+		width: 600px;
+
+		> section {
+			margin-bottom: 30px;
+			> p {
+				margin: 15px 0 5px 0;
+			}
+		}
 
 		.tab {
 			position: relative;
@@ -79,6 +88,8 @@ const Styled = styled.main`
 				li {
 					padding-bottom: 10px;
 					color: ${p => p.theme.colors.text_third};
+					border-bottom: 3px solid rgba(41, 160, 115, 0);
+					transition: all 0.25s linear;
 					&.active {
 						color: ${p => p.theme.colors.text_primary};
 						border-bottom: 3px solid
@@ -97,6 +108,7 @@ const Styled = styled.main`
 `;
 
 export default function MyWallets() {
+	const [tab, setTab] = useState<"all" | "regular">("all");
 	return (
 		<AfterLogin title="My Wallets">
 			<Styled>
@@ -141,17 +153,78 @@ export default function MyWallets() {
 					</div>
 					<div className="tab">
 						<ul>
-							<li className="active">All Payments</li>
-							<li>Regular Payments</li>
+							<li
+								className={tab === "all" ? "active" : ""}
+								onClick={() => setTab("all")}>
+								All Payments
+							</li>
+							<li
+								className={tab === "regular" ? "active" : ""}
+								onClick={() => setTab("regular")}>
+								Regular Payments
+							</li>
 						</ul>
 						<InputIcon>
 							<Search />
 							<input placeholder="Search" />
 						</InputIcon>
 					</div>
-					<div className="title">
-						<h2>Upcoming Payments</h2>
-					</div>
+					<section>
+						<p>Today</p>
+						<Table LineHeight="68px">
+							<div>
+								<div className="date">
+									<p>Payoneer</p>
+									<span>20 Apr 2022, 06:55 PM</span>
+								</div>
+								<div className="num">+ $4,800.24</div>
+							</div>
+							<div>
+								<div className="date">
+									<p>Remitly</p>
+									<span>18 Apr 2022, 08:58 PM</span>
+								</div>
+								<div className="num">- $1,800.24</div>
+							</div>
+							<div>
+								<div className="date">
+									<p>Wise</p>
+									<span>15 Apr 2022, 02:55 AM</span>
+								</div>
+								<div className="num">- $24.32</div>
+							</div>
+							<div>
+								<div className="date">
+									<p>Paypal</p>
+									<span>14 Apr 2022, 07:40 PM</span>
+								</div>
+								<div className="num">- $400.32</div>
+							</div>
+						</Table>
+					</section>
+
+					<section>
+						<div className="title">
+							<h2>Upcoming Payments</h2>
+						</div>
+						<p>Next Month</p>
+						<Table LineHeight="68px">
+							<div>
+								<div className="date">
+									<p>Facebook Ads</p>
+									<span>20 Apr 2022, 06:55 PM</span>
+								</div>
+								<div className="num">$400.00</div>
+							</div>
+							<div>
+								<div className="date">
+									<p>Linkedin Ads</p>
+									<span>18 Apr 2022, 08:58 PM</span>
+								</div>
+								<div className="num">$200.50</div>
+							</div>
+						</Table>
+					</section>
 				</div>
 			</Styled>
 		</AfterLogin>

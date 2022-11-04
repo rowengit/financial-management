@@ -46,8 +46,8 @@ export default function Invoices() {
 						</Button>
 					</div>
 				</div>
-				<Table LineHeight="60px">
-					<div>
+				<Table LineHeight="60px" Striped={true} Border={true}>
+					<div className="header">
 						<div>NAME/CLIENT</div>
 						<div>DATE</div>
 						<div>ORDERS/TYPE</div>

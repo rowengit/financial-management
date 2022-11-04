@@ -1,24 +1,45 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Table = styled.div<{ LineHeight: string }>`
+export const Table = styled.div<{
+	LineHeight: string;
+	Striped?: boolean;
+	Border?: boolean;
+}>`
 	width: 100%;
 	display: table;
 	border-collapse: collapse;
 
 	> div {
 		display: table-row;
-		&:not(:first-child) {
-			border-bottom: 1px ${p => p.theme.colors.border_third} solid;
+
+		&:hover {
+			background-color: ${p => p.theme.colors.gray_3};
 		}
+
+		${p =>
+			p.Border &&
+			css`
+				&:not(.header) {
+					border-bottom: 1px ${p => p.theme.colors.border_third} solid;
+				}
+			`}
 
 		> div {
 			display: table-cell;
 			line-height: ${p => p.LineHeight};
 			vertical-align: middle;
 
-			&:nth-child(even) {
-				color: ${p => p.theme.colors.text_third};
+			&.num {
+				text-align: right;
 			}
+
+			${p =>
+				p.Striped &&
+				css`
+					&:nth-child(even) {
+						color: ${p => p.theme.colors.text_third};
+					}
+				`}
 
 			&.date {
 				span {
@@ -29,6 +50,15 @@ export const Table = styled.div<{ LineHeight: string }>`
 					&:first-child {
 						color: ${p => p.theme.colors.text_primary};
 						margin-bottom: 10px;
+					}
+				}
+
+				p {
+					font-weight: 600;
+					color: ${p => p.theme.colors.text_primary};
+					margin-bottom: 7px;
+					+ span {
+						color: ${p => p.theme.colors.text_third};
 					}
 				}
 			}
@@ -53,7 +83,7 @@ export const Table = styled.div<{ LineHeight: string }>`
 			}
 		}
 
-		&:first-child {
+		&.header {
 			> div {
 				line-height: 20px;
 				padding-bottom: 10px;

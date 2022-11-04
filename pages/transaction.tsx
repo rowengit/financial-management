@@ -28,8 +28,8 @@ export default function Transaction() {
 						<input placeholder="Search anything on Transactions" />
 					</InputIcon>
 				</div>
-				<Table LineHeight="60px">
-					<div>
+				<Table LineHeight="60px" Striped={true} Border={true}>
+					<div className="header">
 						<div>NAME/BUSINESS</div>
 						<div>TYPE</div>
 						<div>AMOUNT</div>

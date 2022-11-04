@@ -174,7 +174,7 @@ export default function Dashboard() {
 							<h2>Recent Transaction</h2>
 							<a>View All</a>
 						</div>
-						<Table LineHeight="53px">
+						<Table LineHeight="53px" Striped={true} Border={true}>
 							<div className="header">
 								<div>NAME/BUSINESS</div>
 								<div>TYPE</div>

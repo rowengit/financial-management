@@ -127,6 +127,10 @@ const Styled = styled.div`
 				border-radius: 5px;
 				cursor: pointer;
 
+				span {
+					white-space: nowrap;
+				}
+
 				svg {
 					margin-left: 10px;
 				}
