@@ -20,3 +20,7 @@ export * from "./wifi";
 export * from "./visa";
 export * from "./masterCard";
 export * from "./plus";
+export * from "./calendar";
+export * from "./email";
+export * from "./edit";
+export * from "./lock";

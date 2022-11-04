@@ -53,7 +53,7 @@ export default function SignIn() {
 					/>
 					<a>Forgot Password</a>
 				</div>
-				<div className="btn-group">
+				<div className="btn-group col">
 					<Button
 						className="btn-submit full"
 						onClick={() => router.push("/")}>

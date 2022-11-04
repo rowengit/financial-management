@@ -46,7 +46,7 @@ export default function SignUp() {
 					<Input title="Email" />
 					<Input title="Password" type="password" />
 				</div>
-				<div className="btn-group">
+				<div className="btn-group col">
 					<Button
 						className="btn-submit full"
 						onClick={() => router.push("/")}>

@@ -4,8 +4,8 @@ import { GlobalStyle } from "./globalStyle";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 
 const defColors: DefaultTheme["colors"] = {
-	text_secondary: "#78778B",
 	text_primary: " #1B212D",
+	text_secondary: "#78778B",
 	text_third: "#929eae",
 	text_fourth: "#626260",
 	text_5: "#868685",
@@ -31,7 +31,9 @@ const defColors: DefaultTheme["colors"] = {
 	status_paid_bg: "#D9FFE9",
 	status_paid_text: "#27AE60",
 	status_unpaid_bg: "#FFEFEF",
-	status_unpaid_text: "#EB5757"
+	status_unpaid_text: "#EB5757",
+
+	error: "#EB5757"
 };
 
 const theme: DefaultTheme = {

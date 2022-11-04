@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
 
     /* ------------------------------ */
 
-    body, h1, h2, h3, p, button, a, p, span, div {
+    body, h1, h2, h3, p, button, a, p, span, div, input {
         font-family: 'Kumbh Sans', sans-serif;
 	}
 
@@ -121,8 +121,11 @@ export const GlobalStyle = createGlobalStyle`
     .btn-group {
         margin: 25px 0;
         display: flex;
-        flex-direction: column;
         gap: 10px;
+
+        &.col {
+            flex-direction: column;
+        }
     }
 
     .input-group {

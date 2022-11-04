@@ -1,7 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ Disabled?: boolean }>`
 	margin: 15px 0;
+	min-width: 200px;
+	width: 100%;
 
 	label {
 		display: block;
@@ -10,7 +12,7 @@ const Wrapper = styled.div`
 
 	input {
 		color: ${p => p.theme.colors.text_secondary};
-		width: calc(100% - 30px);
+		width: calc(100% - 32px);
 
 		border: 1px ${p => p.theme.colors.border_secondary} solid;
 		border-radius: 10px;
@@ -25,21 +27,36 @@ const Wrapper = styled.div`
 			letter-spacing: 0.125em;
 		}
 	}
+
+	${p =>
+		p.Disabled &&
+		css`
+			input {
+				&:disabled {
+					border: none;
+					background: none;
+					padding: 10px 0px;
+					color: ${p => p.theme.colors.text_secondary};
+				}
+			}
+		`}
 `;
 
 export const Input = ({
 	title,
 	placeHolder,
-	type = "text"
+	type = "text",
+	disabled
 }: {
 	title: string;
 	placeHolder?: string;
-	type?: "text" | "password";
+	type?: "text" | "password" | "date";
+	disabled?: boolean;
 }) => {
 	return (
-		<Wrapper>
+		<Wrapper Disabled={disabled}>
 			<label>{title}</label>
-			<input placeholder={placeHolder} type={type} />
+			<input placeholder={placeHolder} type={type} disabled={disabled} />
 		</Wrapper>
 	);
 };

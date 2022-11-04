@@ -39,6 +39,21 @@ const Styled = styled.button`
 		background: ${p => p.theme.colors.gray_1};
 		border: 1px solid ${p => p.theme.colors.border_third};
 	}
+
+	&.update {
+		color: #fff;
+		background: ${p => p.theme.colors.button_bg_secondary};
+		border: 1px solid ${p => p.theme.colors.border_third};
+	}
+
+	&.cancel {
+		background: ${p => p.theme.colors.gray_2};
+		border: 1px solid ${p => p.theme.colors.border_third};
+	}
+
+	&.edit {
+		color: ${p => p.theme.colors.button_bg_secondary};
+	}
 `;
 
 export const Button = ({

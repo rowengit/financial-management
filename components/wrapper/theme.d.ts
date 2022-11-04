@@ -33,6 +33,8 @@ declare module "styled-components" {
 
 			status_unpaid_bg: string;
 			status_unpaid_text: string;
+
+			error: string;
 		};
 	}
 }
