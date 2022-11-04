@@ -102,6 +102,24 @@ const Styled = styled.main`
 				position: absolute;
 				top: -15px;
 				right: 0;
+
+				transition: all 0.25s linear;
+
+				> svg {
+					margin: 6px;
+				}
+
+				> input {
+					margin-right: 0;
+				}
+
+				@media (max-width: 1360px) {
+					top: -47px;
+
+					> input {
+						width: 120px;
+					}
+				}
 			}
 		}
 	}
@@ -164,7 +182,7 @@ export default function MyWallets() {
 								Regular Payments
 							</li>
 						</ul>
-						<InputIcon>
+						<InputIcon bg={true}>
 							<Search />
 							<input placeholder="Search" />
 						</InputIcon>

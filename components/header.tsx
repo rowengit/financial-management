@@ -62,7 +62,7 @@ export const Header = ({ title }: { title: string }) => (
 		<h1>{title}</h1>
 		<div className="right">
 			<IconList>
-				<Search />
+				{/* <Search /> */}
 				<Notification />
 			</IconList>
 			<UserInfo Img={avatar.src}>

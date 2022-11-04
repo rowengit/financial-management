@@ -91,6 +91,17 @@ const Styled = styled.main`
 			}
 		}
 	}
+
+	@media (max-width: 1360px) {
+		.summary {
+			flex-direction: column;
+			gap: 20px;
+
+			> div {
+				width: auto;
+			}
+		}
+	}
 `;
 
 const Recent = styled.div`

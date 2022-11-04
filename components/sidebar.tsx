@@ -31,6 +31,10 @@ const Styled = styled.div`
 			padding-left: 16px;
 			color: ${p => p.theme.colors.text_third};
 
+			&:focus {
+				border-radius: 8px;
+			}
+
 			a {
 				display: flex;
 				align-items: center;

@@ -70,6 +70,7 @@ export const data = {
 };
 
 const Styled = styled.div`
+	text-align: center;
 	padding: 19px 20px;
 	border: 1px ${p => p.theme.colors.border_third} solid;
 	border-radius: 10px;
@@ -86,14 +87,12 @@ const Styled = styled.div`
 		align-items: center;
 	}
 
-	> div {
-		justify-content: space-between;
-		margin-bottom: 30px;
-	}
-
 	.right {
-		width: 50%;
-		justify-content: space-between;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		width: 100%;
+		justify-content: end;
+		gap: 10px;
 
 		ul {
 			gap: 20px;
@@ -172,32 +171,28 @@ export const Char = () => {
 	useClickOutside(ref, () => isOpen(false));
 	return (
 		<Styled>
-			<div>
-				<h2>Working Capital</h2>
-				<div className="right">
-					<ul>
-						<li>
-							<span className="income" />
-							Income
-						</li>
-						<li>
-							<span className="expense" />
-							Expense
-						</li>
-					</ul>
-					<div
-						className={`dropdown${open ? " active" : ""}`}
-						ref={ref}>
-						<div onClick={() => isOpen(prev => !prev)}>
-							<span>Last 7 Days</span>
-							<Down />
-						</div>
-						<ul onClick={() => isOpen(false)}>
-							<li>Last 7 Days</li>
-							<li>Last 30 Days</li>
-							<li>Last 90 Days</li>
-						</ul>
+			<h2>Working Capital</h2>
+			<div className="right">
+				<ul>
+					<li>
+						<span className="income" />
+						Income
+					</li>
+					<li>
+						<span className="expense" />
+						Expense
+					</li>
+				</ul>
+				<div className={`dropdown${open ? " active" : ""}`} ref={ref}>
+					<div onClick={() => isOpen(prev => !prev)}>
+						<span>Last 7 Days</span>
+						<Down />
 					</div>
+					<ul onClick={() => isOpen(false)}>
+						<li>Last 7 Days</li>
+						<li>Last 30 Days</li>
+						<li>Last 90 Days</li>
+					</ul>
 				</div>
 			</div>
 			<Line options={options} data={data} />

@@ -110,9 +110,15 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 17px;
     }
 
+    label {
+        -webkit-tap-highlight-color:transparent;
+    }
+
     a, button, li {
+        -webkit-tap-highlight-color:transparent;
         cursor: pointer;
     }
+
 
     a:hover, button:hover, li:not([class^="active"]):hover {
         opacity:.8;

@@ -8,7 +8,6 @@ export const InputIcon = styled.div<{
 	${p =>
 		p.bg &&
 		css`
-			border: ${p.theme.colors.border_third};
 			border-radius: 15px;
 		`};
 
